@@ -18,8 +18,7 @@ def convertList(lists):
         print('Blank list')
     else:
         listA = [str(i) for i in lists]
-        listA[-1] = 'and ' + listA[-1]
-        print(*listA, sep=', ')
+        print(*listA[:-1], 'and ' + listA[-1], sep=', ')
 
 list1 = []
 for i in range(10):
