@@ -16,13 +16,10 @@ import random
 def convertList(lists):
     if lists == []:
         print('Blank list')
-    
     else:
         listA = [str(i) for i in lists]
         listA[-1] = 'and ' + listA[-1]
-        commaAdd =  ', ' 
-        listFormat = commaAdd.join(listA)
-        print(listFormat)
+        print(*listA, sep=', ')
 
 list1 = []
 for i in range(10):
