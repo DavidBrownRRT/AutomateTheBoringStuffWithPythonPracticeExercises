@@ -11,21 +11,26 @@
 # 'apples, bananas, tofu, and cats'. But your function 
 #should be able to work with any list value passed to it.
 
-import copy
 import random
 
 def convertList(lists):
+    if lists == []:
+        print('Blank list')
     
-    listA = [str(i) for i in lists]
-    listB = copy.copy(listA)
-    listB[-1] = 'and ' + listB[-1]
-    listFormat =  ', ' 
-    listFormat = listFormat.join(listB)
-    print("'" + listFormat + "'")
+    else:
+        listA = [str(i) for i in lists]
+        listA[-1] = 'and ' + listA[-1]
+        commaAdd =  ', ' 
+        listFormat = commaAdd.join(listA)
+        print(listFormat)
 
 list1 = []
 for i in range(10):
     list1.append(random.randint(1,300))  
 list2 = ['Bavarian Beaver Cheese', 'Cheddar', 'Bree', 'Gouda']
+list3 = [1,2,3,'A','B','C']
+list4 = []
 convertList(list1)
 convertList(list2)
+convertList(list3)
+convertList(list4)
